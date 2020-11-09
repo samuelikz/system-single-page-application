@@ -7,11 +7,12 @@
 
     <q-page-container>
       <!-- This is where pages get injected -->
-        <q-footer class="absolute-bottom text-subtitle1 text-center">
-          Samuelikz & Desenvoldor Web
-        </q-footer>
       <router-view />
     </q-page-container>
+
+    <q-footer class="absolute-bottom text-subtitle1 text-center">
+      Samuelikz & Desenvoldor Web
+    </q-footer>
 
   </q-layout>
 </template>
