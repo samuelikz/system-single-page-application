@@ -7,6 +7,9 @@
 
     <q-page-container>
       <!-- This is where pages get injected -->
+        <q-footer class="absolute-bottom text-subtitle1 text-center">
+          Samuelikz & Desenvoldor Web
+        </q-footer>
       <router-view />
     </q-page-container>
 
@@ -28,5 +31,12 @@ export default {
     background: url(https://source.unsplash.com/1600x900/?nature,water);
     width: 100vw;
     height 100vh;
+  }
+
+  .text-subtitle1{
+    position: absolute;
+    padding: 10px;
+    color: #fff;
+    background: rgba(0,0,0,0.47);
   }
 </style>

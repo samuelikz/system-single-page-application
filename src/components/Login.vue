@@ -10,7 +10,6 @@
         <div class="q-pa-md" style="max-width: 400px">
 
           <q-form
-            @submit="onSubmit"
             class="q-gutter-md"
           >
             <q-input
@@ -32,8 +31,6 @@
               :rules="[ val => val && val.length > 5 || 'Senha não Inserida']"
             />
 
-            <q-toggle v-model="accept" label="Eu aceito a licença e os termos" />
-
             <div class="flex flex-center">
               <q-btn label="Cadastrar" to="#" color="primary" flat class="q-ml-sm" />
               <q-btn label="Entrar" type="submit" color="primary"/>
@@ -51,29 +48,7 @@ export default {
   data () {
     return {
       name: null,
-      senha: null,
-
-      accept: false
-    }
-  },
-
-  methods: {
-    onSubmit () {
-      if (this.accept !== true) {
-        this.$q.notify({
-          color: 'red-5',
-          textColor: 'white',
-          icon: 'warning',
-          message: 'Você precisa aceitar a licença e os termos primeiro'
-        })
-      } else {
-        this.$q.notify({
-          color: 'green-4',
-          textColor: 'white',
-          icon: 'cloud_done',
-          message: 'Sucess'
-        })
-      }
+      senha: null
     }
   }
 }
